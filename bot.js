@@ -10,13 +10,13 @@ client.on('ready', () => {
 
 
 client.on('message', message => { // هاذا للبرودكسات
-        var prefix = '!'; // هنا تقدر تغير البرفكس
+        var prefix = 'w!'; // هنا تقدر تغير البرفكس
 	var command = message.content.split(" ")[0];
-	if(command == prefix + 'bc') { // الكوماند !bc
+	if(command == prefix + 'b') { // الكوماند w!b
 		if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You don`t have **ADMINISTRATOR** permission!");
 		var args = message.content.split(' ').slice(1).join(' ');
 		if(message.author.bot) return;
-		if(!args) return message.channel.send(`**➥ Useage:** ${prefix}bc كلامك`);
+		if(!args) return message.channel.send(`**➥ Useage:** ${prefix}b كلامك`);
 		if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You don`t have **ADMINISTRATOR** permission!");
 		
 		let bcSure = new Discord.RichEmbed()
@@ -44,9 +44,9 @@ client.on('message', message => { // هاذا للبرودكسات
             var bc = new Discord.RichEmbed()
             .setColor('#4510a8')
        .setTitle('Broadcast')
-       .addField('سيرفر', message.guild.name)
-       .addField('المرسل', message.author.username)
-       .addField('الرسالة',args)
+       .addField('Server', message.guild.name)
+       .addField('Sender', message.author.username)
+       .addField('Message',args)
        .setThumbnail(message.author.avatarURL)
        .setFooter('🖤 w&w is Life 🖤 ', message.guild.iconURL);
             m.send(`${m}`,{embed: bc});
