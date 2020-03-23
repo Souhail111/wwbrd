@@ -48,7 +48,7 @@ client.on('message', message => { // هاذا للبرودكسات
        .addField('Sender', message.author.username)
        .addField('Message',args)
        .setThumbnail(message.author.avatarURL)
-       .setFooter('🖤 w&w is Life 🖤 ', message.guild.iconURL);
+       .setFooter('🖤 w&w Is Life ', message.guild.iconURL);
             m.send(`${m}`,{embed: bc});
         });
 				message.channel.send(`:timer: **يتم الان الارسال الى** \`\`${message.guild.memberCount}\`\` **عضو**`).then(msg => msg.delete(5000));
