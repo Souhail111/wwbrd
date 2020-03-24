@@ -44,11 +44,11 @@ client.on('message', message => { // هاذا للبرودكسات
             var bc = new Discord.RichEmbed()
             .setColor('#4510a8')
        .setTitle('Broadcast')
-       .addField('Server', message.guild.name)
-       .addField('Sender', message.author.username)
+       .addField('Server', message.guild.iconURL)
+       .addField('Sender', 'Administration')
        .addField('Message',args)
        .setThumbnail(message.author.avatarURL)
-       .setFooter('🖤 w&w Is Life ', message.guild.iconURL);
+       .setFooter('🖤 w&w For Ever ', message.guild.iconURL);
             m.send(`${m}`,{embed: bc});
         });
 				message.channel.send(`:timer: **يتم الان الارسال الى** \`\`${message.guild.memberCount}\`\` **عضو**`).then(msg => msg.delete(5000));
