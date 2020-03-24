@@ -44,7 +44,6 @@ client.on('message', message => { // هاذا للبرودكسات
             var bc = new Discord.RichEmbed()
             .setColor('#4510a8')
        .setTitle('Broadcast')
-       .addField('Server', message.guild.iconURL)
        .addField('Sender', 'Administration')
        .addField('Message',args)
        .setThumbnail(message.author.avatarURL)
