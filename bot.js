@@ -5,14 +5,14 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-	client.user.setGame('w!b (Message) - w&w 🎆',"https://www.twitch.tv/peery13");
+	client.user.setGame('Kingdom - k!b Msg ',"https://www.twitch.tv/peery13");
 });
 
 
 client.on('message', message => { // هاذا للبرودكسات
-        var prefix = 'w!'; // هنا تقدر تغير البرفكس
+        var prefix = 'k!'; // هنا تقدر تغير البرفكس
 	var command = message.content.split(" ")[0];
-	if(command == prefix + 'b') { // الكوماند w!b
+	if(command == prefix + 'b') { // الكوماند k!b
 		if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You don`t have **ADMINISTRATOR** permission!");
 		var args = message.content.split(' ').slice(1).join(' ');
 		if(message.author.bot) return;
@@ -47,7 +47,7 @@ client.on('message', message => { // هاذا للبرودكسات
        .addField('Sender', 'Administration')
        .addField('Message',args)
        .setThumbnail(message.author.avatarURL)
-       .setFooter('🖤 w&w For Ever ', message.guild.iconURL);
+       .setFooter(' 👑 Kingdom For Live ', message.guild.iconURL);
             m.send(`${m}`,{embed: bc});
         });
 				message.channel.send(`:timer: **يتم الان الارسال الى** \`\`${message.guild.memberCount}\`\` **عضو**`).then(msg => msg.delete(5000));
