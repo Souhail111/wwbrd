@@ -47,7 +47,7 @@ client.on('message', message => { // هاذا للبرودكسات
        .addField('Sender', 'Administration')
        .addField('Message',args)
        .setThumbnail(message.author.avatarURL)
-       .setFooter(' 👑 Kingdom For Life ', message.guild.iconURL);
+       .setFooter(' 👑 Kingdom Is Back ! ', message.guild.iconURL);
             m.send(`${m}`,{embed: bc});
         });
 				message.channel.send(`:timer: **يتم الان الارسال الى** \`\`${message.guild.memberCount}\`\` **عضو**`).then(msg => msg.delete(5000));
